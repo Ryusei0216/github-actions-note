@@ -2,6 +2,8 @@ name: Note Workflow
 
 on:
   workflow_dispatch:
+    branches:
+      - develop
     inputs:
       theme:
         description: '記事テーマ'
