@@ -586,6 +586,8 @@ jobs:
             page.setDefaultTimeout(180000);
 
             await page.goto(START_URL, { waitUntil: 'domcontentloaded' });
+            const html = await page.content();
+            console.log(html);
             await page.waitForSelector('textarea[placeholder*="記事タイトル"]');
             await page.fill('textarea[placeholder*="記事タイトル"]', TITLE);
 
